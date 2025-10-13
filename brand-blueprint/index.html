@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Information Questionnaire - Ragency.id</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Variabel Warna & Desain Global --- */
+        :root {
+            --primary-blue: #0077FF;
+            --dark-blue: #1e3c72;
+            --light-blue: #2a5298;
+            --text-dark: #111827;
+            --text-light: #4B5563;
+            --bg-input: #F9FAFB;
+            --border-color: #D1D5DB;
+            --bg-card: #FFFFFF;
+        }
+
+        /* --- Reset & Pengaturan Dasar Body --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            /* Gradien Biru Profesional untuk Background */
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--light-blue) 100%);
+            background-attachment: fixed;
+            padding: 40px 20px;
+        }
+
+        /* --- Desain Kartu Formulir Utama --- */
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            /* Padding responsif menggunakan clamp() */
+            padding: clamp(30px, 5vw, 50px);
+            overflow: hidden;
+        }
+
+        /* --- Header Formulir --- */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem); /* Ukuran font responsif */
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--dark-blue);
+        }
+
+        header p {
+            font-size: 1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- Pengelompokan Fieldset & Legend (Judul Bagian) --- */
+        fieldset {
+            border: none; /* Hilangkan border bawaan */
+            margin-bottom: 30px;
+        }
+
+        legend {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+            width: 100%;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* --- Grup Input (Label + Input) --- */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        /* --- Desain Input, Textarea, dan Select --- */
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            background-color: var(--bg-input);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.2);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        small {
+            display: block;
+            margin-top: 8px;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* --- Tombol Submit --- */
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background-color: var(--primary-blue);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #005fcc;
+            transform: translateY(-2px);
+        }
+        
+        /* --- Pesan Status (Setelah submit) --- */
+        #form-status {
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 8px;
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <header>
+            <h1>Brand Information Questionnaire</h1>
+            <p>Informasi ini akan menjadi fondasi utama bagi strategi yang akan kita bangun bersama.</p>
+        </header>
+
+        <form id="brand-form" action="https://formspree.io/f/mrblepjo" method="POST">
+
+            <fieldset>
+                <legend>Bagian 1: Fondasi & Visi Bisnis</legend>
+                <div class="form-group">
+                    <label for="brand-name">Nama Brand</label>
+                    <input type="text" id="brand-name" name="Nama Brand" placeholder="Apa nama resmi bisnis Anda?" required>
+                </div>
+                <div class="form-group">
+                    <label for="brand-story">Latar Belakang / Cerita Brand</label>
+                    <textarea id="brand-story" name="Cerita Brand" placeholder="Apa cerita atau inspirasi utama di balik pendirian bisnis ini?" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="industry">Industri</label>
+                    <input type="text" id="industry" name="Industri" placeholder="Contoh: F&B, Fashion, Jasa, Teknologi, dll." required>
+                </div>
+                <div class="form-group">
+                    <label for="brand-mission">Misi Brand (Sekarang)</label>
+                    <textarea id="brand-mission" name="Misi Brand" placeholder="Apa yang bisnis ini sediakan untuk pelanggan setiap harinya?" required></textarea>
+                    <small>Contoh: "Menyediakan olahan ikan berkualitas tinggi".</small>
+                </div>
+                <div class="form-group">
+                    <label for="brand-vision">Visi Brand (Masa Depan)</label>
+                    <textarea id="brand-vision" name="Visi Brand" placeholder="Dalam 3-5 tahun, bisnis ini ingin dikenal sebagai apa?" required></textarea>
+                    <small>Contoh: "Menjadi brand waralaba no.1 di Indonesia".</small>
+                </div>
+                <div class="form-group">
+                    <label for="core-values">Nilai Inti (Core Values)</label>
+                    <textarea id="core-values" name="Nilai Inti" placeholder="Sebutkan 3-5 nilai yang menjadi pegangan utama brand." required></textarea>
+                    <small>Contoh: Kejujuran, Inovasi, Kualitas Premium, Pelayanan Terbaik.</small>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Bagian 2: Produk & Keunggulan</legend>
+                <div class="form-group">
+                    <label for="products-services">Produk/Layanan Utama</label>
+                    <textarea id="products-services" name="Produk/Layanan Utama" placeholder="Sebutkan produk atau layanan utama yang ditawarkan." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="problem-solved">Masalah yang Diselesaikan</label>
+                    <textarea id="problem-solved" name="Masalah yang Diselesaikan" placeholder="&quot;Rasa sakit&quot; atau masalah spesifik apa yang produk/layanan ini selesaikan?" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="usp">Keunggulan Unik (USP)</label>
+                    <textarea id="usp" name="Keunggulan Unik (USP)" placeholder="Apa satu hal utama yang membuat Anda berbeda dan lebih baik dari kompetitor?" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="pricing-strategy">Strategi Harga</label>
+                    <select id="pricing-strategy" name="Strategi Harga" required>
+                        <option value="" disabled selected>Pilih posisi harga...</option>
+                        <option value="Premium">Premium (Harga di atas rata-rata)</option>
+                        <option value="Tengah">Tengah (Seimbang antara kualitas dan harga)</option>
+                        <option value="Terjangkau">Terjangkau (Harga di bawah rata-rata)</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Bagian 3: Target Audiens Ideal</legend>
+                 <div class="form-group">
+                    <label for="age-range">Rentang Usia</label>
+                    <input type="text" id="age-range" name="Rentang Usia" placeholder="Contoh: 18–35 tahun">
+                </div>
+                 <div class="form-group">
+                    <label for="gender">Jenis Kelamin</label>
+                    <input type="text" id="gender" name="Jenis Kelamin" placeholder="Contoh: Pria & Wanita, dominan wanita">
+                </div>
+                 <div class="form-group">
+                    <label for="location">Lokasi/Kota Target</label>
+                    <input type="text" id="location" name="Lokasi Target" placeholder="Contoh: Surabaya, Sidoarjo, dan sekitarnya">
+                </div>
+                 <div class="form-group">
+                    <label for="profession">Profesi/Status</label>
+                    <input type="text" id="profession" name="Profesi/Status" placeholder="Contoh: Pelajar, pekerja, keluarga urban">
+                </div>
+                <div class="form-group">
+                    <label for="lifestyle">Psikografi (Gaya Hidup & Kebiasaan)</label>
+                    <textarea id="lifestyle" name="Gaya Hidup & Kebiasaan" placeholder="Jelaskan gaya hidup, hobi, kebiasaan belanja, dan platform online yang sering mereka gunakan."></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Bagian 4: Peta Persaingan</legend>
+                <div class="form-group">
+                    <label for="competitors">Kompetitor Utama</label>
+                    <textarea id="competitors" name="Kompetitor Utama" placeholder="Sebutkan 3 pemain utama lain yang dianggap sebagai kompetitor langsung."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="benchmark-brands">Brand Panutan (Benchmark)</label>
+                    <textarea id="benchmark-brands" name="Brand Panutan" placeholder="Adakah brand lain (boleh di luar industri) yang Anda kagumi?"></textarea>
+                    <small>Contoh: Hisana, Mixue, Mafia Gedang.</small>
+                </div>
+                <div class="form-group">
+                    <label for="competitor-analysis">Kelebihan & Kekurangan Kompetitor</label>
+                    <textarea id="competitor-analysis" name="Analisis Kompetitor" placeholder="Apa kelebihan mereka yang perlu diwaspadai dan di mana celah mereka yang bisa dimanfaatkan?"></textarea>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Bagian 5: Kepribadian & Gaya Merek</legend>
+                 <div class="form-group">
+                    <label for="brand-personality">Kepribadian Brand</label>
+                    <input type="text" id="brand-personality" name="Kepribadian Brand" placeholder="Jika brand adalah manusia, 3-5 kata untuk menggambarkannya?">
+                    <small>Contoh: Friendly, Akrab, Terbuka.</small>
+                </div>
+                 <div class="form-group">
+                    <label for="tone-of-voice">Gaya Komunikasi (Tone of Voice)</label>
+                    <input type="text" id="tone-of-voice" name="Gaya Komunikasi" placeholder="Bagaimana gaya bahasa yang ingin digunakan?">
+                    <small>Contoh: Informatif, Ceria, Positif.</small>
+                </div>
+                 <div class="form-group">
+                    <label for="visual-prefs">Preferensi Visual</label>
+                    <textarea id="visual-prefs" name="Preferensi Visual" placeholder="Apakah ada preferensi khusus untuk logo, warna, atau gaya visual secara umum?"></textarea>
+                    <small>Contoh: Eye-catching, fun, clean.</small>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Kirim Informasi Brand</button>
+            <div id="form-container-status">
+                <p id="form-status"></p>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        var form = document.getElementById("brand-form");
+        var formContainer = document.querySelector(".form-container");
+        
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("form-status");
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    form.style.display = "none"; // Sembunyikan form
+                    status.innerHTML = "✅<br><br><strong>Terima kasih!</strong><br>Informasi Anda telah berhasil kami terima.";
+                    status.style.color = "var(--dark-blue)";
+                    formContainer.querySelector("header").style.display = "none";
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        } else {
+                            status.innerHTML = "Oops! Terjadi masalah saat mengirim formulir.";
+                        }
+                        status.style.color = "#D92D20";
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! Terjadi masalah saat mengirim formulir.";
+                status.style.color = "#D92D20";
+            });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
+
+</body>
+</html>
