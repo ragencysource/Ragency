@@ -173,16 +173,15 @@
             <p>Informasi ini akan menjadi fondasi utama bagi strategi yang akan kita bangun bersama.</p>
         </header>
 
-        <form id="brand-form" action="https://formspree.io/f/mrblepjo" method="POST">
-            <!-- Judul Email Otomatis untuk Notifikasi Formspree -->
+        <form id="brand-form" action="https://formspree.io/f/mrblepjo" method="POST" novalidate>
             <input type="hidden" name="_subject" value="Kuesioner Brand Baru Masuk! - Ragency.id">
 
             <fieldset>
                 <legend>Kontak Klien</legend>
                 <div class="form-group">
                     <label for="client-email">Email Klien / Pengisi Form</label>
-                    <input type="email" id="client-email" name="email" placeholder="contoh: nama@brand.com" required>
-                    <small>Email ini bakal dipake Formspree biar kamu bisa langsung balas lewat inbox.</small>
+                    <input type="email" id="client-email" name="email" placeholder="nama@brand.com" required>
+                    <small>Wajib diisi agar kami dapat menghubungi Anda kembali.</small>
                 </div>
             </fieldset>
 
@@ -244,25 +243,25 @@
 
             <fieldset>
                 <legend>Bagian 3: Target Audiens Ideal</legend>
-                 <div class="form-group">
+                <div class="form-group">
                     <label for="age-range">Rentang Usia</label>
-                    <input type="text" id="age-range" name="Rentang Usia" placeholder="Contoh: 18–35 tahun">
+                    <input type="text" id="age-range" name="Rentang Usia" placeholder="Contoh: 18–35 tahun" required>
                 </div>
-                 <div class="form-group">
+                <div class="form-group">
                     <label for="gender">Jenis Kelamin</label>
-                    <input type="text" id="gender" name="Jenis Kelamin" placeholder="Contoh: Pria & Wanita, dominan wanita">
+                    <input type="text" id="gender" name="Jenis Kelamin" placeholder="Contoh: Pria & Wanita, dominan wanita" required>
                 </div>
-                 <div class="form-group">
+                <div class="form-group">
                     <label for="location">Lokasi/Kota Target</label>
-                    <input type="text" id="location" name="Lokasi Target" placeholder="Contoh: Surabaya, Sidoarjo, dan sekitarnya">
+                    <input type="text" id="location" name="Lokasi Target" placeholder="Contoh: Surabaya, Sidoarjo, dan sekitarnya" required>
                 </div>
-                 <div class="form-group">
+                <div class="form-group">
                     <label for="profession">Profesi/Status</label>
-                    <input type="text" id="profession" name="Profesi/Status" placeholder="Contoh: Pelajar, pekerja, keluarga urban">
+                    <input type="text" id="profession" name="Profesi/Status" placeholder="Contoh: Pelajar, pekerja, keluarga urban" required>
                 </div>
                 <div class="form-group">
                     <label for="lifestyle">Psikografi (Gaya Hidup & Kebiasaan)</label>
-                    <textarea id="lifestyle" name="Gaya Hidup & Kebiasaan" placeholder="Jelaskan gaya hidup, hobi, kebiasaan belanja, dan platform online yang sering mereka gunakan."></textarea>
+                    <textarea id="lifestyle" name="Gaya Hidup & Kebiasaan" placeholder="Jelaskan gaya hidup, hobi, kebiasaan belanja, dan platform online yang sering mereka gunakan." required></textarea>
                 </div>
             </fieldset>
 
@@ -270,31 +269,31 @@
                 <legend>Bagian 4: Peta Persaingan</legend>
                 <div class="form-group">
                     <label for="competitors">Kompetitor Utama</label>
-                    <textarea id="competitors" name="Kompetitor Utama" placeholder="Sebutkan 3 pemain utama lain yang dianggap sebagai kompetitor langsung."></textarea>
+                    <textarea id="competitors" name="Kompetitor Utama" placeholder="Sebutkan 3 pemain utama lain yang dianggap sebagai kompetitor langsung." required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="benchmark-brands">Brand Panutan (Benchmark)</label>
-                    <textarea id="benchmark-brands" name="Brand Panutan" placeholder="Adakah brand lain yang dikagumi?"></textarea>
+                    <textarea id="benchmark-brands" name="Brand Panutan" placeholder="Adakah brand lain yang dikagumi?" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="competitor-analysis">Kelebihan & Kekurangan Kompetitor</label>
-                    <textarea id="competitor-analysis" name="Analisis Kompetitor" placeholder="Apa kelebihan mereka yang perlu diwaspadai dan di mana celah mereka?"></textarea>
+                    <textarea id="competitor-analysis" name="Analisis Kompetitor" placeholder="Apa kelebihan mereka yang perlu diwaspadai dan di mana celah mereka?" required></textarea>
                 </div>
             </fieldset>
             
             <fieldset>
                 <legend>Bagian 5: Kepribadian & Gaya Merek</legend>
-                 <div class="form-group">
+                <div class="form-group">
                     <label for="brand-personality">Kepribadian Brand</label>
-                    <input type="text" id="brand-personality" name="Kepribadian Brand" placeholder="Jika brand adalah manusia, 3-5 kata untuk menggambarkannya?">
+                    <input type="text" id="brand-personality" name="Kepribadian Brand" placeholder="Jika brand adalah manusia, 3-5 kata untuk menggambarkannya?" required>
                 </div>
-                 <div class="form-group">
+                <div class="form-group">
                     <label for="tone-of-voice">Gaya Komunikasi (Tone of Voice)</label>
-                    <input type="text" id="tone-of-voice" name="Gaya Komunikasi" placeholder="Bagaimana gaya bahasa yang ingin digunakan?">
+                    <input type="text" id="tone-of-voice" name="Gaya Komunikasi" placeholder="Bagaimana gaya bahasa yang ingin digunakan?" required>
                 </div>
-                 <div class="form-group">
+                <div class="form-group">
                     <label for="visual-prefs">Preferensi Visual</label>
-                    <textarea id="visual-prefs" name="Preferensi Visual" placeholder="Preferensi khusus untuk logo, warna, atau gaya visual?"></textarea>
+                    <textarea id="visual-prefs" name="Preferensi Visual" placeholder="Preferensi khusus untuk logo, warna, atau gaya visual?" required></textarea>
                 </div>
             </fieldset>
 
@@ -315,6 +314,12 @@
         form.addEventListener("submit", async function(event) {
             event.preventDefault();
             
+            // Validasi: Cek apakah seluruh input required sudah terisi
+            if (!form.checkValidity()) {
+                form.reportValidity(); // Tampilkan balon peringatan bawaan browser di kolom yang terlewat
+                return;
+            }
+
             submitBtn.disabled = true;
             submitBtn.innerText = "Mengirim data...";
             status.innerHTML = "";
@@ -333,21 +338,21 @@
                 if (response.ok) {
                     form.style.display = "none";
                     header.style.display = "none";
-                    status.innerHTML = "✅<br><br><strong>Terima kasih!</strong><br>Informasi brand kamu telah berhasil terkirim dan tersimpan.";
+                    status.innerHTML = "✅<br><br><strong>Terima kasih!</strong><br>Informasi brand Anda berhasil kami terima.";
                     status.style.color = "var(--dark-blue)";
                 } else {
                     const data = await response.json();
                     if (data && data.errors) {
                         status.innerHTML = data.errors.map(err => err.message).join("<br>");
                     } else {
-                        status.innerHTML = "Terjadi kendala saat mengirim. Coba periksa koneksi atau input kamu.";
+                        status.innerHTML = "Terjadi kendala saat mengirim. Coba periksa kembali data Anda.";
                     }
                     status.style.color = "#D92D20";
                     submitBtn.disabled = false;
                     submitBtn.innerText = "Kirim Informasi Brand";
                 }
             } catch (err) {
-                status.innerHTML = "Gagal terhubung ke server Formspree. Pastikan kamu terhubung ke internet.";
+                status.innerHTML = "Gagal terhubung ke server. Periksa koneksi internet Anda.";
                 status.style.color = "#D92D20";
                 submitBtn.disabled = false;
                 submitBtn.innerText = "Kirim Informasi Brand";
